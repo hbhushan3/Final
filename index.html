@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--test comment-->
+    <title>PHP Message</title>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Himanshu"> 
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Enter your username and message and find all the messages in 'See All Messages'</h2>
+    <form action="message.php" method="POST">
+        <label for="username">Username (No Spaces):</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="message">Message (Max 1 Paragraph):</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <p id="see_all_msgs">
+        <a href="result.php">See All Messages</a>
+    </p>
+</div>
+</body>
+</html>
