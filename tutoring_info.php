@@ -21,10 +21,21 @@
                 <th>Day</th>
                 <th>Start Time</th>
                 <th>End Time</th>
-                <th>M</th>
-                <th>T</th>
-                <th>W</th>
-                <th>Th</th>
-                <th>F</th>
+            </tr>
+            <?php
+                $myfile = fopen("tutor_info.txt", "r+");
+                $newline = fgets($myfile);
+
+                while ($newline !== false) 
+                    {
+                        $regex = "/,";                        
+                        echo "<tr><td>".preg_replace($regex . "/", "</td><td>", $newline)."</td></tr>";
+                        $newline = fgets($myfile);
+                    }
+
+
+                fclose($myfile);
+            ?>
+        </table>
     </body>
 </html>
