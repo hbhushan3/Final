@@ -34,12 +34,15 @@
 
             if (!empty($_POST) && !empty($_POST["email"])) 
             {
-                $myfile = fopen("tutor_info.txt", "r+");
+                $myfile = fopen("tutor_info.txt", "a");
+
                 fwrite($myfile, $_POST["email"] . ",");
                 fwrite($myfile, $_POST["full_name"] . ",");
                 fwrite($myfile, $_POST["day"] . ",");
                 fwrite($myfile, $_POST["start_time"] . ",");
                 fwrite($myfile, $_POST["end_time"] . "\n");
+
+                fclose($myfile);
 
                 echo '<script type="text/javascript">',
                                 'alert("You have successfully submitted your hours");',
