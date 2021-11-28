@@ -1,1 +1,2 @@
-test2@gmail.com,Kyle Jenner,Tuesday,15:04,05:02
+test69@gmail.com,Shimin Li,Thursday,14:35,15:05
+test@gmail.com,Kyle Jenner,Monday,16:06,18:02
