@@ -32,8 +32,7 @@
         </style>
     </head>
     <body>
-        <h2>List of tutors with contact information and their availibility</h2>
-
+        <h2></h2>
         <table id="tutor_table">
             <tr bgcolor="6600cc">
                 <th>Email</th>
