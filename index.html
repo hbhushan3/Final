@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Main page has 2 buttons that links to other tutoring info-->
+    <!--Main page has 2 links that lead to other tutoring info-->
 
     <title>PHP Message</title>
 
@@ -12,15 +12,68 @@
         a {
             font-family: arial, sans-serif;
         }
-        body {
+
+        .container {
+            font-family: arial;
+            font-size: 24px;
+            margin: 25px;
+            width: 2325px;
+            height: 100px;
+            /*outline: dashed 1px black; */
+        }
+
+        .child {
+            width: 1000px;
+            height: 1175px;
+            /* background-color: red; */
+            margin: 0 auto;
             background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        body {
+            background-color: #6600cc;
         }
     </style>
 </head>
 <body>
-    <a href="tutoring_info.php">See Available Tutors</a>
-    <br>
-    <a href="form.php">Put In Available Hours for Tutors</a>
+    <p>
+        <div class="container">
+            <div class="child">
+                <br>
+                <b>Winona Tutoring Service</b>
+                <br>
+                <br>
+
+                This website is to be able to connect tutors to people in need of assistance
+                <br>
+                <br>
+
+                Click this link to see the available tutors
+                <br>
+                <a href="tutoring_info.php">Link</a>
+                <br>
+                <br>
+
+                Looking to become a tutor? Click this link to post your hours
+                <br>
+                <a href="form.php">Form</a>
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <img src = "logo.jpg", alt ="logo", width = "500", length = "500">
+            </div>
+        </div>
+    </p>
 </div>
 </body>
 </html>
