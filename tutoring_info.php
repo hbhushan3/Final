@@ -5,13 +5,7 @@
         <meta name="author" content="Himanshu">
 
         <title>Tutor Info</title>
-
-        <link rel="stylesheet" href="style.css">
         <style>
-        table, th, td 
-        {
-            border: 1px solid black;
-        }
         </style>
     </head>
     <body>
@@ -20,7 +14,7 @@
         <h2>List of tutors with contact information and their availibility this week</h2>
 
         <table id="tutor_table">
-            <tr>
+            <tr bgcolor="6600cc">
                 <th>Email</th>
                 <th>Name</th>
                 <th>Day</th>
