@@ -11,11 +11,23 @@
     </head>
     <body>
         <a href="tutoring_info.php">View available tutors and their hours</a>
-        <h2>Please put in the hours you are available this week (Email | Full Name | Day | Start time | End Time)</h2>
+        <h2>Please put in the hours you are available this week</h2>
 
         <form action="form.php" method="post">
+             Email:
+             <br>
              <input type="email" name="email">
+             <br>
+             <br>
+
+             Name:
+             <br>
              <input type="text" name="full_name">
+             <br>
+             <br>
+
+             What Day You Can Tutor:
+             <br>
             <select class="form-control" id="day" name="day">
                 <option>Monday</option> 
                 <option>Tuesday</option> 
@@ -23,8 +35,20 @@
                 <option>Thursday</option> 
                 <option>Friday</option> 
             </select>
+            <br>
+            <br>
+
+            Start Time
+            <br>
             <input type="time" name="start_time">
+            <br>
+            <br>
+            
+            End Time
+            <br>
             <input type="time" name="end_time">
+            <br>
+            <br>
             <input type="submit">
         </form>
         <?php
