@@ -32,7 +32,11 @@
             error_reporting(E_ALL);
             ini_set('display_errors', 1);
 
-            if (!empty($_POST) && !empty($_POST["email"])) 
+            //check if inputs are empty
+            //if not empty, write input to text file seperated by comma
+            //else won't write to text file
+            if (!empty($_POST) && !empty($_POST["email"]) && !empty($_POST["full_name"])
+                && !empty($_POST["day"]) && !empty($_POST["start_time"]) && !empty($_POST["end_time"])) 
             {
                 $myfile = fopen("tutor_info.txt", "a");
 
@@ -48,6 +52,7 @@
                                 'alert("You have successfully submitted your hours");',
                      '</script>';
             }
+            
             /*
             else
             {
