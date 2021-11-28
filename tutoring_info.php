@@ -6,12 +6,33 @@
 
         <title>Tutor Info</title>
         <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        h2, a {
+            font-family: arial, sans-serif;
+        }
         </style>
     </head>
     <body>
-        <a href="index.html">Go back to homepage</a> <br>
-        <a href="form.php">Are you a tutor? Enter your availabilty here</a>
-        <h2>List of tutors with contact information and their availibility this week</h2>
+        <h2>List of tutors with contact information and their availibility</h2>
 
         <table id="tutor_table">
             <tr bgcolor="6600cc">
@@ -36,5 +57,7 @@
                 fclose($myfile);
             ?>
         </table>
+        <br>
+        <a href="index.html">Go back to homepage</a>
     </body>
 </html>

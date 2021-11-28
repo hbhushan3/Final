@@ -6,7 +6,6 @@
 
         <title>Submit Hours</title>
 
-        <link rel="stylesheet" href="style.css">
         <style>
         input[type=text], select, textarea {
             width: 100%; /* Full width */
@@ -29,17 +28,16 @@
             cursor: pointer;
         }
 
-        /* When moving the mouse over the submit button, add a darker green color */
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
         /* Add a background color and some padding around the form */
         .container {
             border-radius: 5px;
-            background-color: #f2f2f2;
             padding: 20px;
-        }   
+        }
+        
+        body {
+            background-color: #f2f2f2;
+        }
+    
         </style>
     </head>
     <body>
@@ -85,7 +83,7 @@
             </form>
 
             <br>
-            <a href="tutoring_info.php">View available tutors and their hours</a>
+            <a href="index.html">Go back to homepage</a>
         </div>
         <?php
             // Report all error information on the webpage
