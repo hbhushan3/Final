@@ -7,11 +7,16 @@
         <title>Tutor Info</title>
 
         <link rel="stylesheet" href="style.css">
-
+        <style>
+        table, th, td 
+        {
+            border: 1px solid black;
+        }
+        </style>
     </head>
     <body>
         <a href="index.html">Go back to homepage</a> <br>
-        <a href="form.php">Are you a tutor? Enter your availibilty here</a>
+        <a href="form.php">Are you a tutor? Enter your availabilty here</a>
         <h2>List of tutors with contact information and their availibility this week</h2>
 
         <table id="tutor_table">
