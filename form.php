@@ -19,7 +19,7 @@
         }
 
         input[type=submit] {
-            background-color: #6600cc;
+            background-color: #656464;
             color: white;
             padding: 12px 20px;
             border: none;
@@ -30,10 +30,11 @@
         .container {
             border-radius: 5px;
             padding: 20px;
+            background-color: #f2f2f2;
         }
         
         body {
-            background-color: #f2f2f2;
+           background-color: #6600cc;
         }
     
         </style>

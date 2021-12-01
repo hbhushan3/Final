@@ -29,23 +29,38 @@
         h2, a {
             font-family: arial, sans-serif;
         }
+
+        th {
+            background-color: #656464;
+        }
+
+        body {
+            background-color: #6600cc;
+        }
+
+        .container {
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #ffffff;
+        }
         </style>
     </head>
     <body>
         <h2></h2>
-        <table id="tutor_table">
-            <tr bgcolor="6600cc">
-                <th>Email</th>
-                <th>Name</th>
-                <th>Day</th>
-                <th>Start Time</th>
-                <th>End Time</th>
-            </tr>
-            <?php
-                $myfile = fopen("tutor_info.txt", "r+");
-                $newline = fgets($myfile);
+        <div class ="container">
+            <table id="tutor_table">
+                <tr>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Day</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+                <?php
+                    $myfile = fopen("tutor_info.txt", "r+");
+                    $newline = fgets($myfile);
 
-                while ($newline !== false) 
+                    while ($newline !== false) 
                     {
                         $regex = "/,";                        
                         echo "<tr><td>".preg_replace($regex . "/", "</td><td>", $newline)."</td></tr>";
@@ -53,10 +68,11 @@
                     }
 
 
-                fclose($myfile);
-            ?>
-        </table>
-        <br>
-        <a href="index.html">Go back to homepage</a>
+                    fclose($myfile);
+                ?>
+            </table>
+            <br>
+            <a href="index.html">Go back to homepage</a>
+        </div>
     </body>
 </html>

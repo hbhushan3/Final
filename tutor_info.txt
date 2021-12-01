@@ -1,2 +1,4 @@
 test69@gmail.com,Joe Biden,Thursday,14:35,15:05
 test@gmail.com,Kyle Jenner,Monday,16:06,18:02
+kylemaciej@gmail.com,Kyle Maciej,Friday,11:30,13:00
+Tylerb@gmail.com,Tyler B,Wednesday,10:00,14:00
