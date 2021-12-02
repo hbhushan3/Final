@@ -1,4 +1,6 @@
-# Tutoring Full Stack Project (HTML, PHP, JavaScript)
-Index.html is the homepage.
-User can view all the tutors available for the week in tutoring_info.php.
-Tutors can submit their hours in form.php.
+# Tutoring Service Full Stack Project (HTML, PHP, JavaScript)
+
+In terms of how to use the website, it is a simple website to navigate. There is a homepage, index.html, which is the center hub and provides links to the two other webpages that can be accessed by the user. The first link is a link to the table to see available tutors and when they are available. It also provides the name and email of the tutors so students can reach out and continue to work with the tutors that they enjoy working with. The second link on the main page is a link to the form if you want to be a tutor. This page asks you for your name, email, what day you can tutor, and when you can tutor on that day. Both webpages also have links back to the main home page, so you don’t have to type in the address to the website again. In terms of using and downloading the product, you don’t need any special software, but you do need all the files in the package for the website for the website to work. 
+  
+Nothing is too complicated about this website, so it’s easy for user to use and follow, especially with the links back to the main page if you click on the wrong link. The only complicated thing about the page is the delete feature on the form. If you want to delete the hours that are on the page, you must but the exact same information as the current tutoring time you wish to delete. This feature is to make sure the program knows which tutoring information to delete. Otherwise, everything is explained when just talking about the website in the previous paragraph.
+
