@@ -36,24 +36,25 @@
         body {
            background-color: #6600cc;
         }
+
+        input {
+            margin-bottom: 10px;
+        }
     
         </style>
     </head>
     <body>
         <div class="container">
-            <h2>Please put in the hours you are available this week</h2>
+            <h2>Please put in the hours you are available or delete hours you have already posted</h2>
             <form action="form.php" method="post">
                 Email:
                 <br>
                 <input type="email" name="email" required>
-                <br>
-                <br>
 
+                <br>
                 Name:
                 <br>
                 <input type="text" name="full_name" required>
-                <br>
-                <br>
 
                 What Day You Can Tutor:
                 <br>
@@ -64,20 +65,17 @@
                     <option>Thursday</option> 
                     <option>Friday</option> 
                 </select>
-                <br>
-                <br>
 
                 Start Time
                 <br>
                 <input type="time" name="start_time" required>
                 <br>
-                <br>
-            
+
                 End Time
                 <br>
                 <input type="time" name="end_time" required>
                 <br>
-                <br>
+
                 <input type="submit" name="btnSubmit" value="Submit">
                 <input type="submit" name="btnDelete" value="Delete">
             </form>
