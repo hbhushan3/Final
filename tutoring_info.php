@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="Himanshu">
+        <meta name="author" content="Kyle">
 
         <title>Tutor Info</title>
         <style>
