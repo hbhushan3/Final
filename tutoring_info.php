@@ -57,17 +57,16 @@
                     <th>End Time</th>
                 </tr>
                 <?php
+                    //get info from text file and display in table
                     $myfile = fopen("tutor_info.txt", "r+");
                     $newline = fgets($myfile);
 
                     while ($newline !== false) 
                     {
-                        $regex = "/,";                        
+                        $regex = "/#,,#";                        
                         echo "<tr><td>".preg_replace($regex . "/", "</td><td>", $newline)."</td></tr>";
                         $newline = fgets($myfile);
                     }
-
-
                     fclose($myfile);
                 ?>
             </table>

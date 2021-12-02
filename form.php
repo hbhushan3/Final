@@ -45,19 +45,19 @@
             <form action="form.php" method="post">
                 Email:
                 <br>
-                <input type="email" name="email">
+                <input type="email" name="email" required>
                 <br>
                 <br>
 
                 Name:
                 <br>
-                <input type="text" name="full_name">
+                <input type="text" name="full_name" required>
                 <br>
                 <br>
 
                 What Day You Can Tutor:
                 <br>
-                <select class="form-control" id="day" name="day">
+                <select class="form-control" id="day" name="day" required>
                     <option>Monday</option> 
                     <option>Tuesday</option> 
                     <option>Wednesday</option> 
@@ -69,16 +69,17 @@
 
                 Start Time
                 <br>
-                <input type="time" name="start_time">
+                <input type="time" name="start_time" required>
                 <br>
                 <br>
             
                 End Time
                 <br>
-                <input type="time" name="end_time">
+                <input type="time" name="end_time" required>
                 <br>
                 <br>
-                <input type="submit">
+                <input type="submit" name="btnSubmit" value="Submit">
+                <input type="submit" name="btnDelete" value="Delete">
             </form>
 
             <br>
@@ -89,35 +90,71 @@
             error_reporting(E_ALL);
             ini_set('display_errors', 1);
 
-            //check if inputs are empty
-            //if not empty, write input to text file seperated by comma
-            //else won't write to text file
-            if (!empty($_POST) && !empty($_POST["email"]) && !empty($_POST["full_name"])
-                && !empty($_POST["day"]) && !empty($_POST["start_time"]) && !empty($_POST["end_time"])) 
+            //check if variables are not empty and what button is pressed
+            if (!empty($_POST)) 
             {
-                $myfile = fopen("tutor_info.txt", "a");
+                //if submit button pressed write input to text file seperated by #,,#
+                if (isset($_POST['btnSubmit'])) 
+                {
+                    $myfile = fopen("tutor_info.txt", "a");
 
-                fwrite($myfile, $_POST["email"] . ",");
-                fwrite($myfile, $_POST["full_name"] . ",");
-                fwrite($myfile, $_POST["day"] . ",");
-                fwrite($myfile, $_POST["start_time"] . ",");
-                fwrite($myfile, $_POST["end_time"] . "\n");
+                    fwrite($myfile, $_POST["email"] . "#,,#");
+                    fwrite($myfile, $_POST["full_name"] . "#,,#");
+                    fwrite($myfile, $_POST["day"] . "#,,#");
+                    fwrite($myfile, $_POST["start_time"] . "#,,#");
+                    fwrite($myfile, $_POST["end_time"] . "\n");
 
-                fclose($myfile);
+                    fclose($myfile);
 
-                echo '<script type="text/javascript">',
-                                'alert("You have successfully submitted your hours");',
-                     '</script>';
+                    echo '<script type="text/javascript">',
+                                    'alert("You have successfully submitted your hours");',
+                        '</script>';
+                }
+                
+                //if delete button pressed
+                if (isset($_POST['btnDelete'])) 
+                {
+                    $found = false; //for checking if line to delete exists in file
+
+                    $del_line = $_POST["email"] . "#,,#" . $_POST["full_name"] . "#,,#" . $_POST["day"] . "#,,#"
+                                . $_POST["start_time"] . "#,,#" . $_POST["end_time"] . "\n";
+                    
+                    $lines = file("tutor_info.txt"); //array with lines from file 
+                    $output = '';
+                    
+                    //store line in $output if it is not equal to $del_line
+                    foreach ($lines as $line) 
+                    {
+                        if ($line!==$del_line) 
+                        {
+                            $output .= $line;
+                        } 
+                        else
+                        {
+                            $found = true;
+                        }
+                    }
+                
+                    //delete successful
+                    if($found)
+                    {
+                        // replace contents of the file with the output
+                        file_put_contents("tutor_info.txt", $output);
+
+                        echo '<script type="text/javascript">',
+                                        'alert("You have successfully deleted your hours");',
+                            '</script>';
+                    }
+
+                    //delete values not found in text file
+                    else
+                    {
+                        echo '<script type="text/javascript">',
+                                    'alert("Not Found, Please check the Values");',
+                            '</script>';
+                    }
+                }
             }
-            
-            /*
-            else
-            {
-                echo '<script type="text/javascript">',
-                                'alert("Failed! Please enter all the information correctly!");',
-                     '</script>';
-            }
-            */
         ?>
     </body>
 </html>
