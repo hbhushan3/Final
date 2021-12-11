@@ -47,7 +47,6 @@
         </style>
     </head>
     <body>
-        <h2></h2>
         <div class ="container">
             <table id="tutor_table">
                 <tr>
